@@ -1,0 +1,1 @@
+The image provided is that of a Ternary Adder (3-Operand Adder). Use the same inputs as provided and write the code for the entire block diagram provided. Use the input and output tags mentioned in the image. Use generic N-1 notation with N defined as 3 for this run.

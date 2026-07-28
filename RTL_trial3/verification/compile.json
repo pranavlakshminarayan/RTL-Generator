@@ -1,0 +1,31 @@
+{
+  "stages": [
+    {
+      "stage": "syntax",
+      "outcome": "pass",
+      "tool_runs": [
+        {
+          "tool": "C:\\iverilog\\bin\\iverilog.exe",
+          "command": [
+            "C:\\iverilog\\bin\\iverilog.exe",
+            "-g2012",
+            "-o",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial3\\verification\\generated_01\\sim.vvp",
+            "-s",
+            "generated_tb",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial3\\generation\\attempt_01.v",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial3\\testbenches\\generated_tb.v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "duration_seconds": 0.156,
+          "timed_out": false
+        }
+      ],
+      "testbench_source": "generated",
+      "skip_reason": "",
+      "detail": "compiled successfully"
+    }
+  ]
+}
