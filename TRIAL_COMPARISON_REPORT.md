@@ -31,6 +31,41 @@ flowchart TD
     Q --> R["Publish folder to RTL-Generator"]
 ```
 
+## Feedback Loop
+
+The model must not treat each execution as isolated. Each run produces
+evidence, and the user corrections from that evidence are converted into
+pipeline memory. That memory is then injected into later interpretation and RTL
+generation prompts so the same mistake is less likely to repeat.
+
+```mermaid
+flowchart LR
+    A["New RTL task\nimage + user text"] --> B["Interpret image and task"]
+    B --> C["Generate RTL from structured spec"]
+    C --> D["Compile, simulate, and manually validate"]
+    D --> E{"Pass or fail?"}
+    E -- "Pass" --> F["Publish result folder"]
+    E -- "Fail or mismatch" --> G["Record error, logs, and wrong assumption"]
+    G --> H["User feedback\ncorrection or clarification"]
+    H --> I["Update project memory\nrules, constraints, examples"]
+    I --> J["Inject memory into future prompts"]
+    J --> B
+    F --> K["Retain successful pattern"]
+    K --> I
+```
+
+In simple terms, the feedback loop is:
+
+```text
+execution result -> mistake or success -> user correction -> project memory ->
+future interpretation/generation prompt -> improved next execution
+```
+
+For example, `RTL_trial1` taught the model not to invent `clk` or `rst` for a
+combinational full adder. `RTL_trial3` taught the model not to change `N` from 3
+to 4 just to make invalid manual values fit. Those are now feedback-memory
+rules, not just notes in a past report.
+
 ## Trial Summary
 
 | Trial | Requested design | Main interpretation | Compile | Simulation | Manual final validation | Overall result |
