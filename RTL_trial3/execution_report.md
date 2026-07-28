@@ -149,6 +149,35 @@ This testbench will NOT be run until you approve it. A pass against it alone is 
 
 Verification uses Icarus Verilog: `iverilog` for compile and `vvp` for simulation.
 
+### Manual Final Validation
+
+The following user-provided adder operations were run as a separate final
+validation using Icarus Verilog. Because `RTL_trial3` defaults to `N = 3`,
+values `8` and `9` exceed the default 3-bit input range. The exact requested
+decimal operations were therefore validated by instantiating the same
+parameterized module with `N = 4`.
+
+```text
+VCD info: dumpfile manual_adder_ops.vcd opened for output.
+PASS 3+6+9 expected=18 observed=18 s=1100 c_prime=0011
+PASS 7+6+5 expected=18 observed=18 s=0100 c_prime=0111
+PASS 0+0+0 expected=0 observed=0 s=0000 c_prime=0000
+PASS 1+1+0 expected=2 observed=2 s=0000 c_prime=0001
+PASS 0+8+2 expected=10 observed=10 s=1010 c_prime=0000
+OVERALL PASS
+manual_adder_ops_tb.v:57: $finish called at 5000 (1ps)
+```
+
+The numeric result is reconstructed from the carry-save outputs as:
+
+```text
+observed_sum = s + (c_prime << 1)
+```
+
+### Simulation Image
+
+![manual adder operation simulation](verification/manual_final/manual_adder_ops_simulation.png)
+
 ## Diagnostics
 
 # Diagnostics
