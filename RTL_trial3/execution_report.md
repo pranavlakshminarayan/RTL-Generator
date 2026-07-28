@@ -152,20 +152,19 @@ Verification uses Icarus Verilog: `iverilog` for compile and `vvp` for simulatio
 ### Manual Final Validation
 
 The following user-provided adder operations were run as a separate final
-validation using Icarus Verilog. Because `RTL_trial3` defaults to `N = 3`,
-values `8` and `9` exceed the default 3-bit input range. The exact requested
-decimal operations were therefore validated by instantiating the same
-parameterized module with `N = 4`.
+validation using Icarus Verilog. `RTL_trial3` is fixed at `N = 3` for this
+execution, so each input must be in the unsigned range `0..7`. Values outside
+that range are marked invalid as `zzz`; the testbench does not change `N`.
 
 ```text
 VCD info: dumpfile manual_adder_ops.vcd opened for output.
-PASS 3+6+9 expected=18 observed=18 s=1100 c_prime=0011
-PASS 7+6+5 expected=18 observed=18 s=0100 c_prime=0111
-PASS 0+0+0 expected=0 observed=0 s=0000 c_prime=0000
-PASS 1+1+0 expected=2 observed=2 s=0000 c_prime=0001
-PASS 0+8+2 expected=10 observed=10 s=1010 c_prime=0000
-OVERALL PASS
-manual_adder_ops_tb.v:57: $finish called at 5000 (1ps)
+INVALID 3+6+9 reason=out_of_range_for_N3 expected=zzz observed=zzz s=zzz c_prime=zzz
+PASS 7+6+5 expected=18 observed=18 s=100 c_prime=111
+PASS 0+0+0 expected=0 observed=0 s=000 c_prime=000
+PASS 1+1+0 expected=2 observed=2 s=000 c_prime=001
+INVALID 0+8+2 reason=out_of_range_for_N3 expected=zzz observed=zzz s=zzz c_prime=zzz
+OVERALL PASS valid_cases_passed invalid_cases=2
+manual_adder_ops_tb.v:65: $finish called at 3000 (1ps)
 ```
 
 The numeric result is reconstructed from the carry-save outputs as:

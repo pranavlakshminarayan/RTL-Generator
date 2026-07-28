@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
 module manual_adder_ops_tb;
-    localparam N = 4;
+    localparam N = 3;
+    localparam MAX_VALUE = (1 << N) - 1;
 
     reg  [N-1:0] x;
     reg  [N-1:0] y;
@@ -8,9 +9,10 @@ module manual_adder_ops_tb;
     wire [N-1:0] s;
     wire [N-1:0] c_prime;
 
-    reg [N:0] expected_sum;
-    reg [N:0] observed_sum;
+    reg [N+1:0] expected_sum;
+    reg [N+1:0] observed_sum;
     integer errors = 0;
+    integer invalid_cases = 0;
 
     ternary_adder #(.N(N)) dut (
         .x(x),
@@ -25,6 +27,11 @@ module manual_adder_ops_tb;
         input integer yi;
         input integer zi;
         begin
+            if ((xi > MAX_VALUE) || (yi > MAX_VALUE) || (zi > MAX_VALUE)) begin
+                invalid_cases = invalid_cases + 1;
+                $display("INVALID %0d+%0d+%0d reason=out_of_range_for_N3 expected=zzz observed=zzz s=zzz c_prime=zzz",
+                         xi, yi, zi);
+            end else begin
             x = xi[N-1:0];
             y = yi[N-1:0];
             z = zi[N-1:0];
@@ -39,6 +46,7 @@ module manual_adder_ops_tb;
                 $display("PASS %0d+%0d+%0d expected=%0d observed=%0d s=%b c_prime=%b",
                          xi, yi, zi, expected_sum, observed_sum, s, c_prime);
             end
+            end
         end
     endtask
 
@@ -52,8 +60,8 @@ module manual_adder_ops_tb;
         run_case(1, 1, 0);
         run_case(0, 8, 2);
 
-        if (errors == 0) $display("OVERALL PASS");
-        else $display("OVERALL FAIL: %0d error(s)", errors);
+        if (errors == 0) $display("OVERALL PASS valid_cases_passed invalid_cases=%0d", invalid_cases);
+        else $display("OVERALL FAIL: %0d error(s) invalid_cases=%0d", errors, invalid_cases);
         $finish;
     end
 endmodule

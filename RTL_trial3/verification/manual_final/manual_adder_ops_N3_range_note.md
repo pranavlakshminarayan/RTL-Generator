@@ -8,6 +8,5 @@ Two requested final-validation cases contain values outside that range:
 - `3 + 6 + 9`: `9` does not fit in 3 bits.
 - `0 + 8 + 2`: `8` does not fit in 3 bits.
 
-To test the exact decimal operations without silent truncation, the manual
-validation testbench instantiates the same parameterized module with `N = 4`.
-This validates the intended generic `N`-bit behavior of the code.
+The correction is to keep `N = 3` and explicitly mark those cases invalid. The
+testbench must not change `N` to make out-of-range values fit.
