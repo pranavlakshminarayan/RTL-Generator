@@ -1,0 +1,174 @@
+{
+  "spec": {
+    "schema_version": "1.0",
+    "image_type": "other_hardware_visual",
+    "design_name": "full_adder",
+    "design_scope": "single_module",
+    "description": "User-confirmed RTL task specification.",
+    "detected_blocks": [],
+    "ports": {
+      "inputs": [
+        {
+          "name": "x_i",
+          "width": 1,
+          "signed": false,
+          "description": "user-confirmed"
+        },
+        {
+          "name": "y_i",
+          "width": 1,
+          "signed": false,
+          "description": "user-confirmed"
+        },
+        {
+          "name": "z_i",
+          "width": 1,
+          "signed": false,
+          "description": "user-confirmed"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "s_i",
+          "width": 1,
+          "signed": false,
+          "description": "user-confirmed"
+        },
+        {
+          "name": "c_i_prime",
+          "width": 1,
+          "signed": false,
+          "description": "user-confirmed"
+        }
+      ]
+    },
+    "components": [],
+    "connections": [],
+    "behaviour": {
+      "kind": "combinational",
+      "equations": [
+        "s_i = x_i ^ y_i ^ z_i",
+        "c_i_prime = (x_i & y_i) | (y_i & z_i) | (x_i & z_i)"
+      ],
+      "state_transitions": [],
+      "timing_constraints": [],
+      "description": "User-confirmed combinational behaviour."
+    },
+    "clock": null,
+    "reset": null,
+    "assumptions": [
+      "Interface and behaviour were supplied by the user after reviewing the model interpretation checkpoint."
+    ],
+    "ambiguities": [
+      "the image could not be reliably interpreted: response does not match StructuredSpec: 6 validation errors for StructuredSpec\ndetected_blocks.0.ports.inputs.0\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value=\"c'\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.inputs.1\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='z', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.inputs.2\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='y', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.inputs.3\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='x', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.outputs.0\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='s', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.outputs.1\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value=\"c'\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type"
+    ],
+    "missing_information": [],
+    "confidence": {
+      "overall": 0.95,
+      "ports": 1.0,
+      "connections": 0.0,
+      "behaviour": 1.0
+    },
+    "retrieval_query": {
+      "text": "",
+      "visual_keywords": [],
+      "module_keywords": []
+    }
+  },
+  "user_description_provided": true,
+  "provisional_description": null,
+  "confirmation_required": false,
+  "detected_image_type": "other_hardware_visual",
+  "detected_blocks": [
+    "full_adder"
+  ],
+  "possible_scopes": [
+    {
+      "scope": "single_module",
+      "label": "single module",
+      "target": null
+    }
+  ],
+  "selected_scope": null,
+  "sufficiency": {
+    "sufficient": true,
+    "understood": [
+      "image type is other_hardware_visual",
+      "design name 'full_adder'",
+      "an intended-behaviour description",
+      "3 input(s) and 2 output(s)",
+      "combinational behaviour"
+    ],
+    "missing_information": [],
+    "reasons": [],
+    "suggested_user_actions": []
+  },
+  "insufficiency": null,
+  "retrieval_references": [
+    {
+      "project_id": "freecores_openmsp430",
+      "item_type": "image",
+      "source_file": "images/cpu_irq_mapping.png",
+      "score": 0.5141,
+      "reason": "visual similarity 0.73",
+      "is_code_only": false
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "item_type": "image",
+      "source_file": "images/cpu_irq_mapping.png",
+      "score": 0.5141,
+      "reason": "visual similarity 0.73",
+      "is_code_only": false
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "item_type": "image",
+      "source_file": "images/dbg_i2c_cmd_write.png",
+      "score": 0.4922,
+      "reason": "visual similarity 0.70",
+      "is_code_only": false
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "item_type": "hdl",
+      "source_file": "hdl/a2_ddr2_dimm_1GB_full_mem_model.v",
+      "score": 0.0526,
+      "reason": "file/module name match 0.05",
+      "is_code_only": false
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "item_type": "hdl",
+      "source_file": "hdl/alt_ddr2_agx2_full_mem_model.v",
+      "score": 0.0526,
+      "reason": "file/module name match 0.05",
+      "is_code_only": false
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "item_type": "hdl",
+      "source_file": "hdl/alt_ddrx_afi_block.v",
+      "score": 0.0526,
+      "reason": "file/module name match 0.05",
+      "is_code_only": false
+    },
+    {
+      "project_id": "klyone_arithmetic_core_ternary_3-input_adder",
+      "item_type": "document",
+      "source_file": "docs/ternary_adder.pdf",
+      "score": 1.0,
+      "reason": "BM25 text match on documentation chunk",
+      "is_code_only": false
+    },
+    {
+      "project_id": "klyone_arithmetic_core_ternary_3-input_adder",
+      "item_type": "document",
+      "source_file": "docs/ternary_adder.pdf",
+      "score": 0.7157,
+      "reason": "BM25 text match on documentation chunk",
+      "is_code_only": false
+    }
+  ],
+  "raw_response_path": ""
+}

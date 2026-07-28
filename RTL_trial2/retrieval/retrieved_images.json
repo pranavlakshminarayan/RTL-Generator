@@ -1,0 +1,108 @@
+{
+  "retrieved_images": [
+    {
+      "project_id": "freecores_openmsp430",
+      "score": 0.5141,
+      "reasons": [
+        "visual similarity 0.73"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/cpu_irq_mapping.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "score": 0.5141,
+      "reasons": [
+        "visual similarity 0.73"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/cpu_irq_mapping.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "score": 0.4922,
+      "reasons": [
+        "visual similarity 0.70"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/dbg_i2c_cmd_write.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "score": 0.4922,
+      "reasons": [
+        "visual similarity 0.70"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/dbg_i2c_cmd_write.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "score": 0.4594,
+      "reasons": [
+        "visual similarity 0.66"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/TUT.ip.hwp.communication.hibi_segment_small.2.0.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "score": 0.4594,
+      "reasons": [
+        "visual similarity 0.66"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/dbg_i2c_cmd_read_burst.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "score": 0.4594,
+      "reasons": [
+        "visual similarity 0.66"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/dbg_i2c_cmd_read_burst.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "score": 0.4484,
+      "reasons": [
+        "visual similarity 0.64"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "images/TUT.chip.arria_ii.1.0.hierarchical.png",
+      "image_type": "other_hardware_visual",
+      "description": ""
+    }
+  ]
+}

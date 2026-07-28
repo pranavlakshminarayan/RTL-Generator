@@ -1,0 +1,27 @@
+{
+  "status": "PASS_WITH_WARNINGS",
+  "warning_categories": [
+    "DECLFILENAME"
+  ],
+  "error_categories": [],
+  "warning_count": 1,
+  "error_count": 0,
+  "tool_run": {
+    "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+    "command": [
+      "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+      "--lint-only",
+      "-Wall",
+      "-Wno-fatal",
+      "--top-module",
+      "full_adder",
+      "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v"
+    ],
+    "exit_code": 0,
+    "stdout": "- V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-99-gf8fb1d664 (mod)\n- Verilator: Built from 0.034 MB sources in 2 modules, into 0.012 MB in 3 C++ files needing 0.000 MB\n- Verilator: Walltime 0.014 s (elab=0.000, cvt=0.005, bld=0.000); cpu 0.000 s on 1 threads; allocated 12.957 MB\n",
+    "stderr": "%Warning-DECLFILENAME: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v:1:8: Filename 'attempt_01' does not match MODULE name: 'full_adder'\n    1 | module full_adder (\n      |        ^~~~~~~~~~\n                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051\n                       ... Use \"/* verilator lint_off DECLFILENAME */\" and lint_on around source to disable this message.\n",
+    "duration_seconds": 1.453,
+    "timed_out": false
+  },
+  "skip_reason": ""
+}

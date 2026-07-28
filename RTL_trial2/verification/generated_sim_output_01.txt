@@ -1,0 +1,8 @@
+MANUAL_VECTOR 000 -> s_i=0 c_i_prime=0
+MANUAL_VECTOR 001 -> s_i=1 c_i_prime=0
+MANUAL_VECTOR 011 -> s_i=0 c_i_prime=1
+MANUAL_VECTOR 100 -> s_i=1 c_i_prime=0
+MANUAL_VECTOR 101 -> s_i=0 c_i_prime=1
+MANUAL_VECTOR 111 -> s_i=1 c_i_prime=1
+PASS
+runs_workdir\RTL_trial2\testbenches\generated_tb.v:44: $finish called at 14000 (1ps)

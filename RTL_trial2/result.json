@@ -1,0 +1,179 @@
+{
+  "run_id": "trial2",
+  "design_name": "full_adder",
+  "language": "verilog",
+  "status": "PASS_GENERATED_TB_ONLY",
+  "statuses": {
+    "functional_status": "PASS_GENERATED_TB_ONLY",
+    "compile_status": "PASS",
+    "simulation_status": "PASS",
+    "verilator_status": "PASS_WITH_WARNINGS",
+    "yosys_status": "PASS"
+  },
+  "independently_verified": false,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "interface": {
+        "status": "OK",
+        "expected_top": "full_adder",
+        "found_top": "full_adder",
+        "differences": [],
+        "authority": "user_specification",
+        "detail": "interface matches"
+      },
+      "stages": [
+        {
+          "stage": "syntax",
+          "outcome": "pass",
+          "tool_runs": [
+            {
+              "tool": "C:\\iverilog\\bin\\iverilog.exe",
+              "command": [
+                "C:\\iverilog\\bin\\iverilog.exe",
+                "-g2012",
+                "-o",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\verification\\generated_01\\sim.vvp",
+                "-s",
+                "generated_tb",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\testbenches\\generated_tb.v"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "duration_seconds": 0.406,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": "generated",
+          "skip_reason": "",
+          "detail": "compiled successfully"
+        },
+        {
+          "stage": "simulation",
+          "outcome": "pass",
+          "tool_runs": [
+            {
+              "tool": "C:\\iverilog\\bin\\vvp.exe",
+              "command": [
+                "C:\\iverilog\\bin\\vvp.exe",
+                "-n",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\verification\\generated_01\\sim.vvp"
+              ],
+              "exit_code": 0,
+              "stdout": "MANUAL_VECTOR 000 -> s_i=0 c_i_prime=0\nMANUAL_VECTOR 001 -> s_i=1 c_i_prime=0\nMANUAL_VECTOR 011 -> s_i=0 c_i_prime=1\nMANUAL_VECTOR 100 -> s_i=1 c_i_prime=0\nMANUAL_VECTOR 101 -> s_i=0 c_i_prime=1\nMANUAL_VECTOR 111 -> s_i=1 c_i_prime=1\nPASS\nruns_workdir\\RTL_trial2\\testbenches\\generated_tb.v:44: $finish called at 14000 (1ps)\n",
+              "stderr": "",
+              "duration_seconds": 0.594,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": "generated",
+          "skip_reason": "",
+          "detail": "pass indicated in output: 'PASS'"
+        },
+        {
+          "stage": "lint",
+          "outcome": "pass",
+          "tool_runs": [
+            {
+              "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+              "command": [
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+                "--lint-only",
+                "-Wall",
+                "-Wno-fatal",
+                "--top-module",
+                "full_adder",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v"
+              ],
+              "exit_code": 0,
+              "stdout": "- V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-99-gf8fb1d664 (mod)\n- Verilator: Built from 0.034 MB sources in 2 modules, into 0.012 MB in 3 C++ files needing 0.000 MB\n- Verilator: Walltime 0.014 s (elab=0.000, cvt=0.005, bld=0.000); cpu 0.000 s on 1 threads; allocated 12.957 MB\n",
+              "stderr": "%Warning-DECLFILENAME: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v:1:8: Filename 'attempt_01' does not match MODULE name: 'full_adder'\n    1 | module full_adder (\n      |        ^~~~~~~~~~\n                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051\n                       ... Use \"/* verilator lint_off DECLFILENAME */\" and lint_on around source to disable this message.\n",
+              "duration_seconds": 1.453,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": null,
+          "skip_reason": "",
+          "detail": "verilator PASS_WITH_WARNINGS warnings=DECLFILENAME"
+        },
+        {
+          "stage": "synthesis",
+          "outcome": "pass",
+          "tool_runs": [
+            {
+              "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+              "command": [
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+                "-q",
+                "-p",
+                "read_verilog \"C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial2/generation/attempt_01.v\"; hierarchy -check -top full_adder; proc; opt; synth -top full_adder; stat"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "",
+              "duration_seconds": 1.0,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": null,
+          "skip_reason": "",
+          "detail": "yosys PASS"
+        }
+      ],
+      "lint": {
+        "status": "PASS_WITH_WARNINGS",
+        "warning_categories": [
+          "DECLFILENAME"
+        ],
+        "error_categories": [],
+        "warning_count": 1,
+        "error_count": 0,
+        "tool_run": {
+          "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+          "command": [
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+            "--lint-only",
+            "-Wall",
+            "-Wno-fatal",
+            "--top-module",
+            "full_adder",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v"
+          ],
+          "exit_code": 0,
+          "stdout": "- V e r i l a t i o n   R e p o r t: Verilator 5.051 devel rev v5.050-99-gf8fb1d664 (mod)\n- Verilator: Built from 0.034 MB sources in 2 modules, into 0.012 MB in 3 C++ files needing 0.000 MB\n- Verilator: Walltime 0.014 s (elab=0.000, cvt=0.005, bld=0.000); cpu 0.000 s on 1 threads; allocated 12.957 MB\n",
+          "stderr": "%Warning-DECLFILENAME: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\generation\\attempt_01.v:1:8: Filename 'attempt_01' does not match MODULE name: 'full_adder'\n    1 | module full_adder (\n      |        ^~~~~~~~~~\n                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051\n                       ... Use \"/* verilator lint_off DECLFILENAME */\" and lint_on around source to disable this message.\n",
+          "duration_seconds": 1.453,
+          "timed_out": false
+        },
+        "skip_reason": ""
+      },
+      "synthesis": {
+        "status": "PASS",
+        "top_module": "full_adder",
+        "statistics": {},
+        "error_excerpt": "",
+        "tool_run": {
+          "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+          "command": [
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+            "-q",
+            "-p",
+            "read_verilog \"C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial2/generation/attempt_01.v\"; hierarchy -check -top full_adder; proc; opt; synth -top full_adder; stat"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "duration_seconds": 1.0,
+          "timed_out": false
+        },
+        "skip_reason": ""
+      },
+      "diagnostics": []
+    }
+  ],
+  "final_attempt_number": 1,
+  "summary": "Final status PASS_GENERATED_TB_ONLY after 1 attempt(s) (0 repair(s)); not independently verified.",
+  "created_at": "2026-07-28T15:19:40.884985+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "stages": [
+    {
+      "stage": "simulation",
+      "outcome": "pass",
+      "tool_runs": [
+        {
+          "tool": "C:\\iverilog\\bin\\vvp.exe",
+          "command": [
+            "C:\\iverilog\\bin\\vvp.exe",
+            "-n",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial2\\verification\\generated_01\\sim.vvp"
+          ],
+          "exit_code": 0,
+          "stdout": "MANUAL_VECTOR 000 -> s_i=0 c_i_prime=0\nMANUAL_VECTOR 001 -> s_i=1 c_i_prime=0\nMANUAL_VECTOR 011 -> s_i=0 c_i_prime=1\nMANUAL_VECTOR 100 -> s_i=1 c_i_prime=0\nMANUAL_VECTOR 101 -> s_i=0 c_i_prime=1\nMANUAL_VECTOR 111 -> s_i=1 c_i_prime=1\nPASS\nruns_workdir\\RTL_trial2\\testbenches\\generated_tb.v:44: $finish called at 14000 (1ps)\n",
+          "stderr": "",
+          "duration_seconds": 0.594,
+          "timed_out": false
+        }
+      ],
+      "testbench_source": "generated",
+      "skip_reason": "",
+      "detail": "pass indicated in output: 'PASS'"
+    }
+  ]
+}

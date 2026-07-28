@@ -1,0 +1,186 @@
+{
+  "retrieved_documents": [
+    {
+      "project_id": "klyone_arithmetic_core_ternary_3-input_adder",
+      "score": 1.0,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/ternary_adder.pdf",
+      "page": null,
+      "section": "The generics as well as the port are identica",
+      "chunk_text": "l for the Altera and Xilinx implementation\nand are described in Table 1 and Table 2, respectively.\n3 Implementation\nBoth implementations uses a carry save adder (CSA) tree with three inputs and a ﬁnal\nripple carry adder as vector merging adder (VMA). One stage of full adders (FAs) is\nused to realize a 3:2 compressor, i. e., the three input bit vectors are compressed to\ntwo bit vectors which are obtained by the sum and carry outputs. A second stage of\nFAs merges these two bit vectors to a single result.\nFor Altera, the 3:2 compressor can be directly mapped to the ALM LUT, realizing\nthe sum s′\ni = xi ⊕ yi ⊕ zi and carry c′\ni = xiyi + xizi + yizi. The full adders of the ALM\nare used for the VMA. To include both stages in a single ALM stage, each ALM has\nto be conﬁgured to the shared arithmetic mode [BLSY09] in which the output of one\nLUT is connected to the FA input of the next higher bit. The resulting ternary adder\nstructure is shown in Figure 1(a).\n1\nTable 1: Description of the generics\nGeneric Type Default Description\ninput_word_size integer 10 Input word size of the inputs x,y and\nz. The output word size is\nautomatically set to\ninput_word_size+2\nsubtract_y boolean false Input y is negated, realizing\ns = x − y ± z\nsubtract_z boolean false Input z is negated, realizing\ns = x ± y − z\nuse_output_ff boolean true If true, the adder uses ﬂip ﬂops at the\noutput (without extra slice or ALM\nresources)\nTable 2: Description of the port\nGeneric Direction Type Word Size Description",
+      "related_modules": [
+        "AC97",
+        "AC97_tb",
+        "PSG16",
+        "PSG16_tb",
+        "PSGBusArb",
+        "PSGChannelSummer",
+        "PSGEnvGen",
+        "PSGFilter",
+        "PSGMasterVolumeControl",
+        "PSGNoteGen"
+      ]
+    },
+    {
+      "project_id": "klyone_arithmetic_core_ternary_3-input_adder",
+      "score": 0.7157,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/ternary_adder.pdf",
+      "page": null,
+      "section": "Generic Type Default Description",
+      "chunk_text": "x ± y − z\nuse_output_ff boolean true If true, the adder uses ﬂip ﬂops at the\noutput (without extra slice or ALM\nresources)\nTable 2: Description of the port\nGeneric Direction Type Word Size Description\nclk_i in sl 1 Clock input (used when\nuse_output_ff=true)\nrst_i in sl 1 Reset input (used when\nuse_output_ff=true)\nx_i in slv input_word_size Input x\ny_i in slv input_word_size Input y\nz_i in slv input_word_size Input z\nsum_o out slv input_word_size + 2 Sum output s\nFor Xilinx, the FA for the 3:2 compressor is also realized in the FPGA LUT [SP06].\nIn addition to that, one additional XOR gate has to be realized in the same LUT\nto complete the fast carry chain resources to a ripple carry adder for the VMA. The\ncarry output of the ﬁrst FA (realized in the LUT) must be routed to the next higher\nFA input using the FPGA routing fabric. The resulting slice conﬁguration is shown\nin Figure 1(b).\n4 Resource Consumption\nFor Altera, each ALM can compute two output bits. As the output word size is two\nbits more than the input word size, there are\nNALM,++ =\n⌈input word size + 2\n2\n⌉\n(1)\n2\nFA\nFAFAFA\nFAFA\n ALM\nLUT\nFA\nFA\n(a)\n0\n1\nSlice\nLUT\nFA\n0\n1\nFA\n0\n1\nFA\nCarry\nLogic\n0\n1\nFA\n(b)\nFigure 1: Realization of ternary adders on (a) Altera Stratix II-V ALMs (b) Xilinx\nVirtex 5-7 Slices\nALMs needed for a pure addition ( s = x + y + z). If one input is subtracted (setting\none of subtract_y or subtract_y to true), the word length has to be extended by\none bit leading to:\nNALM,+− =\n⌈in",
+      "related_modules": [
+        "AC97",
+        "AC97_tb",
+        "PSG16",
+        "PSG16_tb",
+        "PSGBusArb",
+        "PSGChannelSummer",
+        "PSGEnvGen",
+        "PSGFilter",
+        "PSGMasterVolumeControl",
+        "PSGNoteGen"
+      ]
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "score": 0.4123,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/msp430f1121a.pdf",
+      "page": null,
+      "section": "Security Fuse",
+      "chunk_text": "Small-Outline Thin Package, 20-Pin TVSOP\n(F11x1A only), and 24-Pin QFN\n/C0068For Complete Module Descriptions, Refer\nto the MSP430x1xx Family User’s Guide,\nLiterature Number SLAU049\n     \ndescription\nThe T exas Instruments MSP430 family of ultralow-power microcontrollers consists of several devices featuring\ndifferent sets of peripherals targeted for various applications. The architecture, combined with five low-power\nmodes is optimized to achieve extended battery life in portable measurement applications. The device features\na powerful 16-bit RISC CPU, 16-bit registers, and constant generators that contribute to maximum code\nefficiency. The digitally controlled oscillator (DCO) allows wake-up from low-power modes to active mode in less\nthan 6 μs.\nThe MSP430x11x1(A) series is an ultralow-power mixed signal microcontroller with a built-in 16-bit timer,\nversatile analog comparator and fourteen I/O pins.\nTypical applications include sensor systems that capture analog signals, convert them to digital values, and then\nprocess the data for display or for transmission to a host system. Stand alone radio frequency (RF) sensor front\nend is another area of application. The I/O port inputs provide single slope A/D conversion capability on resistive\nsensors.\nThis integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled with",
+      "related_modules": [
+        "ALTERA_DEVICE_FAMILIES",
+        "ALTERA_MF_MEMORY_INITIALIZATION",
+        "AND2",
+        "AND2A",
+        "AND2B",
+        "AND3",
+        "AND3A",
+        "AND3B",
+        "AND3C",
+        "AO1"
+      ]
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "score": 0.4123,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/msp430f1121a.pdf",
+      "page": null,
+      "section": "Security Fuse",
+      "chunk_text": "Small-Outline Thin Package, 20-Pin TVSOP\n(F11x1A only), and 24-Pin QFN\n/C0068For Complete Module Descriptions, Refer\nto the MSP430x1xx Family User’s Guide,\nLiterature Number SLAU049\n     \ndescription\nThe T exas Instruments MSP430 family of ultralow-power microcontrollers consists of several devices featuring\ndifferent sets of peripherals targeted for various applications. The architecture, combined with five low-power\nmodes is optimized to achieve extended battery life in portable measurement applications. The device features\na powerful 16-bit RISC CPU, 16-bit registers, and constant generators that contribute to maximum code\nefficiency. The digitally controlled oscillator (DCO) allows wake-up from low-power modes to active mode in less\nthan 6 μs.\nThe MSP430x11x1(A) series is an ultralow-power mixed signal microcontroller with a built-in 16-bit timer,\nversatile analog comparator and fourteen I/O pins.\nTypical applications include sensor systems that capture analog signals, convert them to digital values, and then\nprocess the data for display or for transmission to a host system. Stand alone radio frequency (RF) sensor front\nend is another area of application. The I/O port inputs provide single slope A/D conversion capability on resistive\nsensors.\nThis integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled with",
+      "related_modules": [
+        "AC97",
+        "AC97_tb",
+        "ALTERA_DEVICE_FAMILIES",
+        "ALTERA_MF_MEMORY_INITIALIZATION",
+        "AND2",
+        "AND2A",
+        "AND2B",
+        "AND3",
+        "AND3A",
+        "AND3B"
+      ]
+    },
+    {
+      "project_id": "freecores_sgmii",
+      "score": 0.3925,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/SGMII_Datasheet.pdf",
+      "page": null,
+      "section": "Link-up is asserted after the synchronization is",
+      "chunk_text": "orted) \nSGMIIDuplex, this core only support full duplex \nmode.  \nSGMII Phy-Side Signals  Phy-Side SGMII advertised information \n input  i_PhyLink, \n input i_PhyDuplex, \n input  [1:0] i2_PhySpeed,  \n  \n PhyLink bit is tied to Bit.15 of Advertised \nConfigurations to indicate copper-link is up or \ndown. PhyDuplex and PhySpeed are tied to bit \n12,11:10 of advertised 16-bit information \nGMII Interface   \n input [07:00] i8_TxD, \n input i_TxEN, \n input i_TxER, \n output [07:00] o8_RxD, \n output o_RxDV, \n output o_RxER, \n output o_GMIIClk, \n output o_MIIClk, \n output o_Col, \n output o_Crs \n Standard GMII interface \nGMIIClk output 125MHz clock output by the \ntranceiver.  \nMIIClk output 25MHz clock used in 100Mbps \nmode.  \n \n \n  \nSGMII/1000-BaseX  www.fpga-ipcores.com \n3 \n \n2.1. REGISTERS \nThe registers in the cores are accessed through 32-bit bus. Therefore registers are mapped into \nDouble-word address although each register is only 16-bit. The 16 most significant bits are always \nzeros.  \nBit Name Offset Default Description \n Control \nRegister \n0x00   \n5:0 Reserved R/W 5’b0 Not used \n6 MSB Speed \nSelection \nR/W 0 From Table 22-7 (IEEE 802.3-2008-Section2) \n \nThis bit is used only inSGMII mode. The speed of SGMII \nmode can be configured to use these 2 bits or use link \npartner advertised speed and duplex. \n7 Collision \nTest \nR/W 1’b0 Not support \n8 Duplex \nMode \nR/W  Only full duplex mode is supported",
+      "related_modules": [
+        "Broadcast_filter",
+        "CLK_DIV2",
+        "CLK_SWITCH",
+        "CRC_chk",
+        "CRC_gen",
+        "Clk_ctrl",
+        "Clk_ctrl_V4port",
+        "Clocks",
+        "DDR_I",
+        "DDR_O"
+      ]
+    },
+    {
+      "project_id": "klyone_arithmetic_core_ternary_3-input_adder",
+      "score": 0.3656,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/ternary_adder.pdf",
+      "page": null,
+      "section": "",
+      "chunk_text": "Ternary Adder IP Cores\nMartin Kumm, Jens Willkomm\nApril 4, 2013\n1 Introduction\nThis IP core provides resource eﬃcient ternary adders, i. e., adders with three inputs\nperforming s = x+y+z, for the Altera and Xilinx platforms. Resource eﬃcient means\nthat they need exactly the same resources on modern FPGAs as two-input adders,\nbut are slightly slower. The Xilinx core ( ternary_adder_xilinx.vhd) is a low-level\nimplementation, following an US patent from Xilinx [SP06]. It directly uses the Xilinx\nprimitives (CARRY4, LUT6_2 and FDCE). It is suitable for all FPGAs providing 6-input\nLUTs. Today, these are the Virtex 5-7, Spartan 6, Kintex 7 and Artix 7 families.\nThe Altera core ( ternary_adder_altera.vhd) is a high-level implementation using\nthe ’+’ operator. However, the ternary subtract operations ( x − y + z, x + y − z and\nx−y−z) are not supported by a high-level description; so this is realized by extending\nthe word size of the ternary adders and setting the lower bits to appropriate constant\nvalues. They can be mapped very resource eﬃcient for all Altera FPGAs providing\nadaptive logic modules (ALMs), today, these are the Arria I,II,V and Stratix II-V\nFPGAs.\n2 Interface\nThe generics as well as the port are identical for the Altera and Xilinx implementation\nand are described in Table 1 and Table 2, respectively.\n3 Implementation\nBoth implementations uses a carry save adder (CSA) tree with three inputs and a ﬁnal",
+      "related_modules": [
+        "AC97",
+        "AC97_tb",
+        "PSG16",
+        "PSG16_tb",
+        "PSGBusArb",
+        "PSGChannelSummer",
+        "PSGEnvGen",
+        "PSGFilter",
+        "PSGMasterVolumeControl",
+        "PSGNoteGen"
+      ]
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "score": 0.348,
+      "reasons": [
+        "BM25 text match on documentation chunk"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "document_path": "docs/Video_gen_1.pdf",
+      "page": null,
+      "section": "",
+      "chunk_text": "Video_gen_1 Video_gen_1 \nGenerates continous image Generates continous image \npattern data feed to HIBI pattern data feed to HIBI --bus bus \nUSED IN FUNBASE FIRST USED IN FUNBASE FIRST \nAPPLICATION APPLICATION \nGeneral Info General Info \n/square6/square6640 x 480 size, 8bit wide gray image 640 x 480 size, 8bit wide gray image \n/square6/square63 different test pattern images 3 different test pattern images \n/square6/square6After reset, one image is been After reset, one image is been \ngenerated and written through HIBI generated and written through HIBI --\nbus to DDR2 block bus to DDR2 block \n/square6/square6After that waiting for permission to After that waiting for permission to \nstart over and producing the next start over and producing the next \nimage frame image frame \nGenerics Generics \n/square6/square6image_data_width image_data_width :                  Bits, tells how wide is the image data. :                  Bits, tells how wide is the image data. \n/square6/square6image_fps image_fps :                            Not implemented.. For the future :                            Not implemented.. For the future ……\nDesired frame Desired frame s per  second s per  second ……\n/square6/square6image_pattern_id image_pattern_id :                  Which kind of image pattern is been produced; :                  Which kind of image pattern is been produced; \n1 = Constant Squares,  2 = T 1 = Constant Squares,  2 = T --letter, 3 = Moving T letter, 3 = Moving T --letter letter",
+      "related_modules": [
+        "a2_ddr2_dimm_1GB",
+        "a2_ddr2_dimm_1GB_alt_ddrx_controller_wrapper",
+        "a2_ddr2_dimm_1GB_controller_phy",
+        "a2_ddr2_dimm_1GB_full_mem_model",
+        "a2_ddr2_dimm_1GB_full_mem_model_ram_module",
+        "a2_ddr2_dimm_1GB_phy",
+        "a2_ddr2_dimm_1GB_phy_alt_mem_phy_ac",
+        "a2_ddr2_dimm_1GB_phy_alt_mem_phy_addr_cmd",
+        "a2_ddr2_dimm_1GB_phy_alt_mem_phy_dq_dqs",
+        "a2_ddr2_dimm_1GB_phy_alt_mem_phy_mimic"
+      ]
+    }
+  ]
+}

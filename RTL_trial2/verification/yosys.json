@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "top_module": "full_adder",
+  "statistics": {},
+  "error_excerpt": "",
+  "tool_run": {
+    "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+    "command": [
+      "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+      "-q",
+      "-p",
+      "read_verilog \"C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial2/generation/attempt_01.v\"; hierarchy -check -top full_adder; proc; opt; synth -top full_adder; stat"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "duration_seconds": 1.0,
+    "timed_out": false
+  },
+  "skip_reason": ""
+}

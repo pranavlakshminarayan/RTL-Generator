@@ -1,0 +1,157 @@
+{
+  "retrieved_projects": [
+    {
+      "project_id": "klyone_arithmetic_core_ternary_3-input_adder",
+      "project_name": "arithmetic_core_ternary_3-input_adder",
+      "quality_tier": "A",
+      "languages": [
+        "verilog"
+      ],
+      "score": 0.45,
+      "breakdown": {
+        "text_similarity": 1.0,
+        "image_similarity": 0.0,
+        "language_match": 1.0,
+        "module_name_match": 0.0,
+        "port_match": 0.0,
+        "image_type_match": 0.0,
+        "project_relevance": 0.5
+      },
+      "reasons": [
+        "documentation match in ternary_adder.pdf (The generics as well as the port are identica)",
+        "project name matches query",
+        "project contains verilog sources"
+      ],
+      "eligibility": {
+        "has_verilog": true,
+        "has_useful_image": true,
+        "has_reference_testbench": true,
+        "retrieval_eligible": true,
+        "image_training_eligible": true
+      }
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "project_name": "processor_openmsp430",
+      "quality_tier": "A",
+      "languages": [
+        "verilog"
+      ],
+      "score": 0.3834,
+      "breakdown": {
+        "text_similarity": 0.4123185164040309,
+        "image_similarity": 0.5140625,
+        "language_match": 1.0,
+        "module_name_match": 0.05263157894736842,
+        "port_match": 0.0,
+        "image_type_match": 0.0,
+        "project_relevance": 0.5
+      },
+      "reasons": [
+        "documentation match in msp430f1121a.pdf (Security Fuse)",
+        "visually similar image: cpu_irq_mapping.png",
+        "HDL module/file name match: tA_output.v",
+        "project contains verilog sources"
+      ],
+      "eligibility": {
+        "has_verilog": true,
+        "has_useful_image": true,
+        "has_reference_testbench": true,
+        "retrieval_eligible": true,
+        "image_training_eligible": true
+      }
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "project_name": "openmsp430",
+      "quality_tier": "C",
+      "languages": [
+        "verilog"
+      ],
+      "score": 0.3534,
+      "breakdown": {
+        "text_similarity": 0.4123185164040309,
+        "image_similarity": 0.5140625,
+        "language_match": 1.0,
+        "module_name_match": 0.05263157894736842,
+        "port_match": 0.0,
+        "image_type_match": 0.0,
+        "project_relevance": 0.2
+      },
+      "reasons": [
+        "documentation match in msp430f1121a.pdf (Security Fuse)",
+        "visually similar image: cpu_irq_mapping.png",
+        "HDL module/file name match: tA_output.v",
+        "project contains verilog sources"
+      ],
+      "eligibility": {
+        "has_verilog": true,
+        "has_useful_image": true,
+        "has_reference_testbench": true,
+        "retrieval_eligible": true,
+        "image_training_eligible": true
+      }
+    },
+    {
+      "project_id": "freecores_sgmii",
+      "project_name": "sgmii",
+      "quality_tier": "C",
+      "languages": [
+        "verilog"
+      ],
+      "score": 0.3195,
+      "breakdown": {
+        "text_similarity": 0.392483459264497,
+        "image_similarity": 0.4484375,
+        "language_match": 1.0,
+        "module_name_match": 0.0,
+        "port_match": 0.0,
+        "image_type_match": 0.0,
+        "project_relevance": 0.2
+      },
+      "reasons": [
+        "documentation match in SGMII_Datasheet.pdf (Link-up is asserted after the synchronization is)",
+        "visually similar image: lpbff_wave0.jpg",
+        "project contains verilog sources"
+      ],
+      "eligibility": {
+        "has_verilog": true,
+        "has_useful_image": true,
+        "has_reference_testbench": true,
+        "retrieval_eligible": true,
+        "image_training_eligible": true
+      }
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "project_name": "funbase_ip_library",
+      "quality_tier": "C",
+      "languages": [
+        "verilog"
+      ],
+      "score": 0.3172,
+      "breakdown": {
+        "text_similarity": 0.34803424384675175,
+        "image_similarity": 0.459375,
+        "language_match": 1.0,
+        "module_name_match": 0.05263157894736842,
+        "port_match": 0.0,
+        "image_type_match": 0.0,
+        "project_relevance": 0.2
+      },
+      "reasons": [
+        "documentation match in Video_gen_1.pdf (text)",
+        "visually similar image: TUT.ip.hwp.communication.hibi_segment_small.2.0.png",
+        "HDL module/file name match: a2_ddr2_dimm_1GB_full_mem_model_ram_module, a2_ddr2_dimm_1GB_full_mem_model",
+        "project contains verilog sources"
+      ],
+      "eligibility": {
+        "has_verilog": true,
+        "has_useful_image": true,
+        "has_reference_testbench": true,
+        "retrieval_eligible": true,
+        "image_training_eligible": true
+      }
+    }
+  ]
+}

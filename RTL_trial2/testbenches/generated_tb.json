@@ -1,0 +1,18 @@
+{
+  "circuit_class": "combinational",
+  "source_code": "`timescale 1ns/1ps\nmodule generated_tb;\n    reg x_i;\n    reg y_i;\n    reg z_i;\n    wire s_i;\n    wire c_i_prime;\n    reg expected_s_i;\n    reg expected_c_i_prime;\n    integer errors = 0;\n    reg [2:0] manual_vectors [0:5];\n    integer manual_idx;\n    initial begin\n        manual_vectors[0] = 3'b000;\n        manual_vectors[1] = 3'b001;\n        manual_vectors[2] = 3'b011;\n        manual_vectors[3] = 3'b100;\n        manual_vectors[4] = 3'b101;\n        manual_vectors[5] = 3'b111;\n    end\n    full_adder dut (.x_i(x_i), .y_i(y_i), .z_i(z_i), .s_i(s_i), .c_i_prime(c_i_prime));\n    integer i;\n    initial begin\n        for (i = 0; i < (1 << 3); i = i + 1) begin\n            x_i = i[0:0];\n            y_i = i[1:1];\n            z_i = i[2:2];\n            #1;\n            expected_s_i = x_i ^ y_i ^ z_i;\n            expected_c_i_prime = (x_i & y_i) | (y_i & z_i) | (x_i & z_i);\n            if ((s_i !== expected_s_i) || (c_i_prime !== expected_c_i_prime)) begin errors = errors + 1; $display(\"FAIL: output mismatch s_i=%b expected=%b, c_i_prime=%b expected=%b\", s_i, expected_s_i, c_i_prime, expected_c_i_prime); end\n        end\n        for (manual_idx = 0; manual_idx < 6; manual_idx = manual_idx + 1) begin\n            x_i = manual_vectors[manual_idx][2];\n            y_i = manual_vectors[manual_idx][1];\n            z_i = manual_vectors[manual_idx][0];\n            #1;\n            expected_s_i = x_i ^ y_i ^ z_i;\n            expected_c_i_prime = (x_i & y_i) | (y_i & z_i) | (x_i & z_i);\n            if ((s_i !== expected_s_i) || (c_i_prime !== expected_c_i_prime)) begin errors = errors + 1; $display(\"FAIL: output mismatch s_i=%b expected=%b, c_i_prime=%b expected=%b\", s_i, expected_s_i, c_i_prime, expected_c_i_prime); end\n        end\n        if (errors == 0) $display(\"PASS\"); else $display(\"FAIL: %0d error(s)\", errors); $finish;\n    end\nendmodule\n",
+  "strategy": "Drive inputs (exhaustive for small spaces, else zero/max/boundary plus randomized cases) and check outputs.",
+  "test_cases": [
+    "exhaustive over all input combinations",
+    "zero and maximum values (covered by sweep)",
+    "6 manual user final-validation vector(s)",
+    "equation-derived output checks"
+  ],
+  "expected_output_source": "structured specification equations/transitions",
+  "differential": false,
+  "reference_module": "",
+  "limitations": [
+    "a pass here is PASS_GENERATED_TB_ONLY and is not independent verification"
+  ],
+  "approved": false
+}
