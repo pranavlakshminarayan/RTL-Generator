@@ -1,0 +1,19 @@
+module full_adder (
+    input wire x_i,
+    input wire y_i,
+    input wire z_i,
+    output reg s_i,
+    output reg c_i_prime
+);
+
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        s_i <= 1'b0;
+        c_i_prime <= 1'b0;
+    end else begin
+        s_i <= x_i ^ y_i ^ z_i;
+        c_i_prime <= (x_i & y_i) | (y_i & z_i) | (x_i & z_i);
+    end
+end
+
+endmodule

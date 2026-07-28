@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "top_module": "full_adder",
+  "statistics": {},
+  "error_excerpt": "",
+  "tool_run": {
+    "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+    "command": [
+      "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+      "-q",
+      "-p",
+      "read_verilog \"C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v\"; hierarchy -check -top full_adder; proc; opt; synth -top full_adder; stat"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v:9: Warning: Identifier `\\clk' is implicitly declared.\nC:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v:9: Warning: Identifier `\\rst' is implicitly declared.\nWarning: Wire full_adder.\\rst is used but has no driver.\nWarning: Wire full_adder.\\clk is used but has no driver.\n",
+    "duration_seconds": 1.5,
+    "timed_out": false
+  },
+  "skip_reason": ""
+}

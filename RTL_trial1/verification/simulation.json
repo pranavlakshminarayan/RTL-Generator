@@ -1,0 +1,12 @@
+{
+  "stages": [
+    {
+      "stage": "simulation",
+      "outcome": "skipped",
+      "tool_runs": [],
+      "testbench_source": "generated",
+      "skip_reason": "compilation failed",
+      "detail": ""
+    }
+  ]
+}

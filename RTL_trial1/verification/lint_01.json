@@ -1,0 +1,29 @@
+{
+  "status": "FAIL",
+  "warning_categories": [
+    "DECLFILENAME"
+  ],
+  "error_categories": [
+    "GENERAL"
+  ],
+  "warning_count": 1,
+  "error_count": 3,
+  "tool_run": {
+    "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+    "command": [
+      "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+      "--lint-only",
+      "-Wall",
+      "-Wno-fatal",
+      "--top-module",
+      "full_adder",
+      "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "%Warning-DECLFILENAME: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:1:8: Filename 'attempt_01' does not match MODULE name: 'full_adder'\n    1 | module full_adder (\n      |        ^~~~~~~~~~\n                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051\n                       ... Use \"/* verilator lint_off DECLFILENAME */\" and lint_on around source to disable this message.\n%Error: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:9:18: Can't find definition of variable: 'clk'\n    9 | always @(posedge clk or posedge rst) begin\n      |                  ^~~\n        ... See the manual at https://verilator.org/verilator_doc.html?v=5.051 for more assistance.\n%Error: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:9:33: Can't find definition of variable: 'rst'\n    9 | always @(posedge clk or posedge rst) begin\n      |                                 ^~~\n%Error: Exiting due to 2 error(s)\n",
+    "duration_seconds": 1.438,
+    "timed_out": false
+  },
+  "skip_reason": ""
+}

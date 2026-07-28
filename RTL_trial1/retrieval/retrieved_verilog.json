@@ -1,0 +1,111 @@
+{
+  "retrieved_verilog": [
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/a2_ddr2_dimm_1GB_full_mem_model.v",
+      "language": "verilog",
+      "module_names": [
+        "a2_ddr2_dimm_1GB_full_mem_model_ram_module",
+        "a2_ddr2_dimm_1GB_full_mem_model"
+      ],
+      "excerpt": ""
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/alt_ddr2_agx2_full_mem_model.v",
+      "language": "verilog",
+      "module_names": [
+        "alt_ddr2_agx2_full_mem_model_ram_module",
+        "alt_ddr2_agx2_full_mem_model"
+      ],
+      "excerpt": ""
+    },
+    {
+      "project_id": "freecores_funbase_ip_library",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/alt_ddrx_afi_block.v",
+      "language": "verilog",
+      "module_names": [
+        "alt_ddrx_afi_block"
+      ],
+      "excerpt": ""
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/tA_output.v",
+      "language": "verilog",
+      "module_names": [],
+      "excerpt": ""
+    },
+    {
+      "project_id": "freecores_openmsp430",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/two-op_bit.v",
+      "language": "verilog",
+      "module_names": [],
+      "excerpt": ""
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/tA_output.v",
+      "language": "verilog",
+      "module_names": [],
+      "excerpt": ""
+    },
+    {
+      "project_id": "klyone_processor_openmsp430",
+      "score": 0.0526,
+      "reasons": [
+        "file/module name match 0.05"
+      ],
+      "has_useful_image": true,
+      "retrieval_eligible": true,
+      "image_training_eligible": true,
+      "path": "hdl/two-op_bit.v",
+      "language": "verilog",
+      "module_names": [],
+      "excerpt": ""
+    }
+  ],
+  "retrieved_testbenches": []
+}

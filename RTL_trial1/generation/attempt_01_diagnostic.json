@@ -1,0 +1,18 @@
+{
+  "stage": "syntax",
+  "status": "FAIL_COMPILE",
+  "tool": "iverilog",
+  "location": "iverilog compile",
+  "error_excerpt": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to bind wire/reg/memory `rst' in `generated_tb.dut'\nC:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to elaborate condition expression.\n2 error(s) during elaboration.\n",
+  "likely_causes": [
+    "syntax error or unsupported construct",
+    "undeclared signal or mismatched module/port name",
+    "missing semicolon, begin/end, or endmodule"
+  ],
+  "suggested_corrections": [
+    "keep the confirmed module name and port names unchanged",
+    "fix the logic so the failing stage passes",
+    "do not introduce new ports or rename existing ports"
+  ],
+  "repair_attempted": true
+}

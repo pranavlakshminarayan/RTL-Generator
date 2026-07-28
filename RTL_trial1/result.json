@@ -1,0 +1,186 @@
+{
+  "run_id": "trial1",
+  "design_name": "full_adder",
+  "language": "verilog",
+  "status": "FAIL_COMPILE",
+  "statuses": {
+    "functional_status": "FAIL_COMPILE",
+    "compile_status": "FAIL",
+    "simulation_status": "SKIPPED",
+    "verilator_status": "FAIL",
+    "yosys_status": "PASS"
+  },
+  "independently_verified": false,
+  "attempts": [
+    {
+      "attempt_number": 1,
+      "interface": {
+        "status": "OK",
+        "expected_top": "full_adder",
+        "found_top": "full_adder",
+        "differences": [],
+        "authority": "user_specification",
+        "detail": "interface matches"
+      },
+      "stages": [
+        {
+          "stage": "syntax",
+          "outcome": "fail",
+          "tool_runs": [
+            {
+              "tool": "C:\\iverilog\\bin\\iverilog.exe",
+              "command": [
+                "C:\\iverilog\\bin\\iverilog.exe",
+                "-g2012",
+                "-o",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\verification\\generated_01\\sim.vvp",
+                "-s",
+                "generated_tb",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\testbenches\\generated_tb.v"
+              ],
+              "exit_code": 2,
+              "stdout": "",
+              "stderr": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to bind wire/reg/memory `rst' in `generated_tb.dut'\nC:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to elaborate condition expression.\n2 error(s) during elaboration.\n",
+              "duration_seconds": 1.391,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": "generated",
+          "skip_reason": "",
+          "detail": "iverilog reported compilation errors"
+        },
+        {
+          "stage": "simulation",
+          "outcome": "skipped",
+          "tool_runs": [],
+          "testbench_source": "generated",
+          "skip_reason": "compilation failed",
+          "detail": ""
+        },
+        {
+          "stage": "lint",
+          "outcome": "fail",
+          "tool_runs": [
+            {
+              "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+              "command": [
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+                "--lint-only",
+                "-Wall",
+                "-Wno-fatal",
+                "--top-module",
+                "full_adder",
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v"
+              ],
+              "exit_code": 1,
+              "stdout": "",
+              "stderr": "%Warning-DECLFILENAME: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:1:8: Filename 'attempt_01' does not match MODULE name: 'full_adder'\n    1 | module full_adder (\n      |        ^~~~~~~~~~\n                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051\n                       ... Use \"/* verilator lint_off DECLFILENAME */\" and lint_on around source to disable this message.\n%Error: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:9:18: Can't find definition of variable: 'clk'\n    9 | always @(posedge clk or posedge rst) begin\n      |                  ^~~\n        ... See the manual at https://verilator.org/verilator_doc.html?v=5.051 for more assistance.\n%Error: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:9:33: Can't find definition of variable: 'rst'\n    9 | always @(posedge clk or posedge rst) begin\n      |                                 ^~~\n%Error: Exiting due to 2 error(s)\n",
+              "duration_seconds": 1.438,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": null,
+          "skip_reason": "",
+          "detail": "verilator FAIL warnings=DECLFILENAME errors=GENERAL"
+        },
+        {
+          "stage": "synthesis",
+          "outcome": "pass",
+          "tool_runs": [
+            {
+              "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+              "command": [
+                "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+                "-q",
+                "-p",
+                "read_verilog \"C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v\"; hierarchy -check -top full_adder; proc; opt; synth -top full_adder; stat"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": "C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v:9: Warning: Identifier `\\clk' is implicitly declared.\nC:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v:9: Warning: Identifier `\\rst' is implicitly declared.\nWarning: Wire full_adder.\\rst is used but has no driver.\nWarning: Wire full_adder.\\clk is used but has no driver.\n",
+              "duration_seconds": 1.5,
+              "timed_out": false
+            }
+          ],
+          "testbench_source": null,
+          "skip_reason": "",
+          "detail": "yosys PASS"
+        }
+      ],
+      "lint": {
+        "status": "FAIL",
+        "warning_categories": [
+          "DECLFILENAME"
+        ],
+        "error_categories": [
+          "GENERAL"
+        ],
+        "warning_count": 1,
+        "error_count": 3,
+        "tool_run": {
+          "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+          "command": [
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\verilator.cmd",
+            "--lint-only",
+            "-Wall",
+            "-Wno-fatal",
+            "--top-module",
+            "full_adder",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "%Warning-DECLFILENAME: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:1:8: Filename 'attempt_01' does not match MODULE name: 'full_adder'\n    1 | module full_adder (\n      |        ^~~~~~~~~~\n                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.051\n                       ... Use \"/* verilator lint_off DECLFILENAME */\" and lint_on around source to disable this message.\n%Error: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:9:18: Can't find definition of variable: 'clk'\n    9 | always @(posedge clk or posedge rst) begin\n      |                  ^~~\n        ... See the manual at https://verilator.org/verilator_doc.html?v=5.051 for more assistance.\n%Error: C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:9:33: Can't find definition of variable: 'rst'\n    9 | always @(posedge clk or posedge rst) begin\n      |                                 ^~~\n%Error: Exiting due to 2 error(s)\n",
+          "duration_seconds": 1.438,
+          "timed_out": false
+        },
+        "skip_reason": ""
+      },
+      "synthesis": {
+        "status": "PASS",
+        "top_module": "full_adder",
+        "statistics": {},
+        "error_excerpt": "",
+        "tool_run": {
+          "tool": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+          "command": [
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\tools\\yosys.cmd",
+            "-q",
+            "-p",
+            "read_verilog \"C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v\"; hierarchy -check -top full_adder; proc; opt; synth -top full_adder; stat"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "C:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v:9: Warning: Identifier `\\clk' is implicitly declared.\nC:/Users/prana/Documents/Claude Code/CHIPFORGE/Code Generator Model/runs_workdir/RTL_trial1/generation/attempt_01.v:9: Warning: Identifier `\\rst' is implicitly declared.\nWarning: Wire full_adder.\\rst is used but has no driver.\nWarning: Wire full_adder.\\clk is used but has no driver.\n",
+          "duration_seconds": 1.5,
+          "timed_out": false
+        },
+        "skip_reason": ""
+      },
+      "diagnostics": [
+        {
+          "stage": "syntax",
+          "status": "FAIL_COMPILE",
+          "tool": "iverilog",
+          "location": "iverilog compile",
+          "error_excerpt": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to bind wire/reg/memory `rst' in `generated_tb.dut'\nC:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to elaborate condition expression.\n2 error(s) during elaboration.\n",
+          "likely_causes": [
+            "syntax error or unsupported construct",
+            "undeclared signal or mismatched module/port name",
+            "missing semicolon, begin/end, or endmodule"
+          ],
+          "suggested_corrections": [
+            "keep the confirmed module name and port names unchanged",
+            "fix the logic so the failing stage passes",
+            "do not introduce new ports or rename existing ports"
+          ],
+          "repair_attempted": true
+        }
+      ]
+    }
+  ],
+  "final_attempt_number": 1,
+  "summary": "Attempt 1 failed at syntax. Repair was not attempted because user review is required.",
+  "created_at": "2026-07-28T15:00:44.818299+00:00"
+}

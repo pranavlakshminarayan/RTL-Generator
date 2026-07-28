@@ -1,0 +1,1 @@
+The image provided is of a 3 bit adder ripple carry circuit. The block has 3 inputs and a sum and carry output. Generate the code only for one full adder block of the image using the notations as confirmed by the user.

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "image_type": "other_hardware_visual",
+  "design_name": "full_adder",
+  "design_scope": "single_module",
+  "description": "User-confirmed RTL task specification.",
+  "detected_blocks": [],
+  "ports": {
+    "inputs": [
+      {
+        "name": "x_i",
+        "width": 1,
+        "signed": false,
+        "description": "user-confirmed"
+      },
+      {
+        "name": "y_i",
+        "width": 1,
+        "signed": false,
+        "description": "user-confirmed"
+      },
+      {
+        "name": "z_i",
+        "width": 1,
+        "signed": false,
+        "description": "user-confirmed"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "s_i",
+        "width": 1,
+        "signed": false,
+        "description": "user-confirmed"
+      },
+      {
+        "name": "c_i_prime",
+        "width": 1,
+        "signed": false,
+        "description": "user-confirmed"
+      }
+    ]
+  },
+  "components": [],
+  "connections": [],
+  "behaviour": {
+    "kind": "combinational",
+    "equations": [
+      "s_i = x_i ^ y_i ^ z_i",
+      "c_i_prime = (x_i & y_i) | (y_i & z_i) | (x_i & z_i)"
+    ],
+    "state_transitions": [],
+    "timing_constraints": [],
+    "description": "User-confirmed combinational behaviour."
+  },
+  "clock": null,
+  "reset": null,
+  "assumptions": [
+    "Interface and behaviour were supplied by the user after reviewing the model interpretation checkpoint."
+  ],
+  "ambiguities": [
+    "the image could not be reliably interpreted: response does not match StructuredSpec: 6 validation errors for StructuredSpec\ndetected_blocks.0.ports.inputs.0\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value=\"c'\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.inputs.1\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='z', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.inputs.2\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='y', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.inputs.3\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='x', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.outputs.0\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value='s', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type\ndetected_blocks.0.ports.outputs.1\n  Input should be a valid dictionary or instance of Port [type=model_type, input_value=\"c'\", input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/model_type"
+  ],
+  "missing_information": [],
+  "confidence": {
+    "overall": 0.95,
+    "ports": 1.0,
+    "connections": 0.0,
+    "behaviour": 1.0
+  },
+  "retrieval_query": {
+    "text": "",
+    "visual_keywords": [],
+    "module_keywords": []
+  }
+}

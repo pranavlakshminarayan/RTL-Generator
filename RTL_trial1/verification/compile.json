@@ -1,0 +1,31 @@
+{
+  "stages": [
+    {
+      "stage": "syntax",
+      "outcome": "fail",
+      "tool_runs": [
+        {
+          "tool": "C:\\iverilog\\bin\\iverilog.exe",
+          "command": [
+            "C:\\iverilog\\bin\\iverilog.exe",
+            "-g2012",
+            "-o",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\verification\\generated_01\\sim.vvp",
+            "-s",
+            "generated_tb",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v",
+            "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\testbenches\\generated_tb.v"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "C:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to bind wire/reg/memory `rst' in `generated_tb.dut'\nC:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial1\\generation\\attempt_01.v:10: error: Unable to elaborate condition expression.\n2 error(s) during elaboration.\n",
+          "duration_seconds": 1.391,
+          "timed_out": false
+        }
+      ],
+      "testbench_source": "generated",
+      "skip_reason": "",
+      "detail": "iverilog reported compilation errors"
+    }
+  ]
+}

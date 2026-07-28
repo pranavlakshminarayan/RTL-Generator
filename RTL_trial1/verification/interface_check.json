@@ -1,0 +1,8 @@
+{
+  "status": "OK",
+  "expected_top": "full_adder",
+  "found_top": "full_adder",
+  "differences": [],
+  "authority": "user_specification",
+  "detail": "interface matches"
+}
