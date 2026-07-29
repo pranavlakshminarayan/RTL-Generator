@@ -23,7 +23,7 @@
       ],
       "testbench_source": null,
       "skip_reason": "",
-      "detail": "Corrected arithmetic ALU RTL compiled standalone before testbench execution."
+      "detail": "RTL compiled standalone before testbench execution."
     },
     {
       "stage": "syntax",
@@ -35,11 +35,11 @@
             "iverilog",
             "-g2012",
             "-o",
-            "verification/user_02/sim.vvp",
+            "verification/generated_03/sim.vvp",
             "-s",
-            "trial4_user_tb",
+            "generated_tb",
             "generation/final.v",
-            "testbenches/user_tb.v"
+            "testbenches/generated_tb.v"
           ],
           "exit_code": 0,
           "stdout": "",
@@ -48,9 +48,9 @@
           "timed_out": false
         }
       ],
-      "testbench_source": "user",
+      "testbench_source": "generated",
       "skip_reason": "",
-      "detail": "User arithmetic ALU testbench compiled successfully."
+      "detail": "Generated primary testbench compiled successfully using non-user final-validation cases."
     }
   ]
 }

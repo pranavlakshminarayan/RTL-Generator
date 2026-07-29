@@ -9,18 +9,18 @@
           "command": [
             "vvp",
             "-n",
-            "verification/user_02/sim.vvp"
+            "verification/generated_03/sim.vvp"
           ],
           "exit_code": 0,
-          "stdout": "P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00000\u00000\u0000 \u0000a\u0000=\u00003\u0000 \u0000b\u0000=\u00001\u00000\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00003\u00000\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00000\u00000\u0000 \u0000a\u0000=\u00002\u0000 \u0000b\u0000=\u00002\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00004\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00000\u00001\u0000 \u0000a\u0000=\u00007\u0000 \u0000b\u0000=\u00007\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00000\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00000\u00001\u0000 \u0000a\u0000=\u00004\u0000 \u0000b\u0000=\u00003\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00001\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00001\u00000\u0000 \u0000a\u0000=\u00001\u00000\u0000 \u0000b\u0000=\u00005\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00002\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00001\u00000\u0000 \u0000a\u0000=\u00007\u0000 \u0000b\u0000=\u00002\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00003\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000_\u0000C\u0000A\u0000S\u0000E\u0000 \u0000s\u0000e\u0000l\u0000=\u00001\u00001\u0000 \u0000a\u0000=\u00001\u00000\u0000 \u0000b\u0000=\u00002\u0000 \u0000r\u0000e\u0000s\u0000u\u0000l\u0000t\u0000=\u00000\u0000\n\u0000\n\u0000P\u0000A\u0000S\u0000S\u0000\n\u0000\n\u0000C\u0000:\u0000\\\u0000U\u0000s\u0000e\u0000r\u0000s\u0000\\\u0000p\u0000r\u0000a\u0000n\u0000a\u0000\\\u0000D\u0000o\u0000c\u0000u\u0000m\u0000e\u0000n\u0000t\u0000s\u0000\\\u0000C\u0000l\u0000a\u0000u\u0000d\u0000e\u0000 \u0000C\u0000o\u0000d\u0000e\u0000\\\u0000C\u0000H\u0000I\u0000P\u0000F\u0000O\u0000R\u0000G\u0000E\u0000\\\u0000C\u0000o\u0000d\u0000e\u0000 \u0000G\u0000e\u0000n\u0000e\u0000r\u0000a\u0000t\u0000o\u0000r\u0000 \u0000M\u0000o\u0000d\u0000e\u0000l\u0000\\\u0000r\u0000u\u0000n\u0000s\u0000_\u0000w\u0000o\u0000r\u0000k\u0000d\u0000i\u0000r\u0000\\\u0000R\u0000T\u0000L\u0000_\u0000t\u0000r\u0000i\u0000a\u0000l\u00004\u0000\\\u0000t\u0000e\u0000s\u0000t\u0000b\u0000e\u0000n\u0000c\u0000h\u0000e\u0000s\u0000\\\u0000u\u0000s\u0000e\u0000r\u0000_\u0000t\u0000b\u0000.\u0000v\u0000:\u00009\u00005\u0000:\u0000 \u0000$\u0000f\u0000i\u0000n\u0000i\u0000s\u0000h\u0000 \u0000c\u0000a\u0000l\u0000l\u0000e\u0000d\u0000 \u0000a\u0000t\u0000 \u00007\u00000\u00000\u00000\u0000 \u0000(\u00001\u0000p\u0000s\u0000)\u0000\n\u0000\n\u0000",
+          "stdout": "PASS_PRIMARY sel=00 a=6 b=3 result=18 channel=0\r\nPASS_PRIMARY sel=00 a=5 b=5 result=25 channel=0\r\nPASS_PRIMARY sel=01 a=9 b=2 result=7 channel=1\r\nPASS_PRIMARY sel=01 a=8 b=6 result=2 channel=1\r\nPASS_PRIMARY sel=10 a=12 b=3 result=4 channel=0\r\nPASS_PRIMARY sel=10 a=9 b=4 result=2 channel=0\r\nPASS_PRIMARY sel=11 a=13 b=5 result=3 channel=1\r\nPASS_PRIMARY sel=10 a=7 b=0 result=0 channel=0\r\nPASS_PRIMARY inactive gate clears outputs\r\nPASS\r\nC:\\Users\\prana\\Documents\\Claude Code\\CHIPFORGE\\Code Generator Model\\runs_workdir\\RTL_trial4\\testbenches\\generated_tb.v:125: $finish called at 9000 (1ps)\r\n",
           "stderr": "",
           "duration_seconds": null,
           "timed_out": false
         }
       ],
-      "testbench_source": "user",
+      "testbench_source": "generated",
       "skip_reason": "",
-      "detail": "All multiplication, subtraction, division, and modulus cases passed."
+      "detail": "Generated primary testbench passed using cases separate from manual final validation."
     }
   ]
 }
