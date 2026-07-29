@@ -1,0 +1,9 @@
+VCD info: dumpfile manual_final.vcd opened for output.
+PASS AND DATA_IN_0=12 DATA_IN_1=10 expected=8 observed=8 channel=0 parity=1
+PASS OR DATA_IN_0=12 DATA_IN_1=10 expected=14 observed=14 channel=1 parity=1
+PASS GE DATA_IN_0=15 DATA_IN_1=7 expected=1 observed=1 channel=0 parity=1
+PASS LE DATA_IN_0=15 DATA_IN_1=7 expected=0 observed=0 channel=1 parity=0
+PASS EQ DATA_IN_0=4 DATA_IN_1=9 expected=0 observed=0 channel=0 parity=0
+PASS NE DATA_IN_0=4 DATA_IN_1=9 expected=1 observed=1 channel=1 parity=1
+OVERALL PASS
+manual_final_tb.v:100: $finish called at 65000 (1ps)

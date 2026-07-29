@@ -1,0 +1,20 @@
+{
+  "stages": [
+    {
+      "stage": "syntax",
+      "outcome": "pass",
+      "tool_runs": [],
+      "testbench_source": null,
+      "skip_reason": "",
+      "detail": "RTL compiled standalone before testbench execution."
+    },
+    {
+      "stage": "syntax",
+      "outcome": "pass",
+      "tool_runs": [],
+      "testbench_source": "generated",
+      "skip_reason": "",
+      "detail": "Generated primary testbench compiled successfully."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+GTKWave viewer configured for interactive VCD inspection:
+C:\msys64\mingw64\bin\gtkwave.exe
+
+Open manual_final.gtkw or manual_final.vcd with GTKWave to inspect the same simulation that produced manual_final_waveform.png.

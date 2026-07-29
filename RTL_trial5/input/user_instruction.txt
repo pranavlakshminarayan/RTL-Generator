@@ -1,0 +1,8 @@
+TASK:
+Write a code to execute the logical and relational operations on the ALU.
+
+Folder name:
+RTL_trial5
+
+Process note:
+The user will provide manual final validation inputs after compile and primary testbench verification. Manual inputs must not be reused as primary testbench cases.

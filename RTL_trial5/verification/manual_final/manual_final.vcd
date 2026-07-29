@@ -1,0 +1,231 @@
+$date
+	Wed Jul 29 18:08:46 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module manual_final_tb $end
+$var wire 1 ! VALID_1 $end
+$var wire 1 " VALID_0 $end
+$var wire 1 # PARITY_1 $end
+$var wire 1 $ PARITY_0 $end
+$var wire 16 % DATA_OUT_1 [15:0] $end
+$var wire 16 & DATA_OUT_0 [15:0] $end
+$var reg 1 ' CLK $end
+$var reg 8 ( DATA_IN_0 [7:0] $end
+$var reg 8 ) DATA_IN_1 [7:0] $end
+$var reg 8 * DATA_IN_2 [7:0] $end
+$var reg 1 + DATA_VALID_IN $end
+$var reg 1 , RES $end
+$var reg 2 - SEL [1:0] $end
+$var reg 1 . STB $end
+$var integer 32 / errors [31:0] $end
+$scope module dut $end
+$var wire 1 ' CLK $end
+$var wire 8 0 DATA_IN_0 [7:0] $end
+$var wire 8 1 DATA_IN_1 [7:0] $end
+$var wire 8 2 DATA_IN_2 [7:0] $end
+$var wire 1 + DATA_VALID_IN $end
+$var wire 1 , RES $end
+$var wire 2 3 SEL [1:0] $end
+$var wire 1 . STB $end
+$var wire 1 " VALID_0 $end
+$var wire 1 ! VALID_1 $end
+$var wire 1 4 gated_valid $end
+$var wire 1 5 output_channel $end
+$var wire 3 6 alu_op [2:0] $end
+$var wire 1 # PARITY_1 $end
+$var wire 1 $ PARITY_0 $end
+$var wire 16 7 DATA_OUT_1 [15:0] $end
+$var wire 16 8 DATA_OUT_0 [15:0] $end
+$var reg 16 9 alu_result [15:0] $end
+$upscope $end
+$scope task run_case $end
+$var reg 8 : a [7:0] $end
+$var reg 8 ; b [7:0] $end
+$var reg 16 < expected [15:0] $end
+$var reg 1 = expected_parity $end
+$var reg 128 > label [127:0] $end
+$var reg 16 ? observed [15:0] $end
+$var reg 3 @ op [2:0] $end
+$var reg 2 A sel [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx A
+bx @
+bx ?
+bx >
+x=
+bx <
+bx ;
+bx :
+b0 9
+b0 8
+b0 7
+b0 6
+05
+04
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+0.
+b0 -
+0,
+0+
+b0 *
+b0 )
+b0 (
+0'
+b0 &
+b0 %
+0$
+0#
+0"
+0!
+$end
+#5000
+b1000 &
+b1000 8
+1$
+1"
+14
+b1000 9
+1+
+1.
+b1010 )
+b1010 1
+b1100 (
+b1100 0
+b1000 <
+b1010 ;
+b1100 :
+b0 @
+b0 A
+b10000010100111001000100 >
+#10000
+b1000 ?
+1=
+#15000
+b1110 %
+b1110 7
+1#
+0$
+b0 &
+b0 8
+1!
+0"
+b1110 9
+b1 6
+15
+b1 *
+b1 2
+b1 -
+b1 3
+b1110 <
+b1 @
+b1 A
+b100111101010010 >
+#20000
+b1110 ?
+#25000
+b1 &
+b1 8
+1$
+0!
+1"
+b0 %
+b0 7
+0#
+b10 6
+b1 9
+05
+b10 *
+b10 2
+b111 )
+b111 1
+b1111 (
+b1111 0
+b10 -
+b10 3
+b1 <
+b111 ;
+b1111 :
+b10 @
+b10 A
+b100011101000101 >
+#30000
+b1 ?
+#35000
+b0 &
+b0 8
+0$
+1!
+0"
+b0 9
+b11 6
+15
+b11 *
+b11 2
+b11 -
+b11 3
+b0 <
+b11 @
+b11 A
+b100110001000101 >
+#40000
+b0 ?
+0=
+#45000
+0!
+1"
+b0 %
+b0 7
+0#
+b100 6
+b0 9
+05
+b100 *
+b100 2
+b1001 )
+b1001 1
+b100 (
+b100 0
+b10 -
+b10 3
+b1001 ;
+b100 :
+b100 @
+b10 A
+b100010101010001 >
+#55000
+b1 %
+b1 7
+1#
+1!
+0"
+b1 9
+b101 6
+15
+b101 *
+b101 2
+b11 -
+b11 3
+b1 <
+b101 @
+b11 A
+b100111001000101 >
+#60000
+b1 ?
+1=
+#65000
