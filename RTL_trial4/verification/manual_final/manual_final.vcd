@@ -1,0 +1,212 @@
+$date
+	Wed Jul 29 15:40:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module manual_final_tb $end
+$var wire 1 ! VALID_1 $end
+$var wire 1 " VALID_0 $end
+$var wire 1 # PARITY_1 $end
+$var wire 1 $ PARITY_0 $end
+$var wire 16 % DATA_OUT_1 [15:0] $end
+$var wire 16 & DATA_OUT_0 [15:0] $end
+$var reg 1 ' CLK $end
+$var reg 8 ( DATA_IN_0 [7:0] $end
+$var reg 8 ) DATA_IN_1 [7:0] $end
+$var reg 8 * DATA_IN_2 [7:0] $end
+$var reg 1 + DATA_VALID_IN $end
+$var reg 1 , RES $end
+$var reg 2 - SEL [1:0] $end
+$var reg 1 . STB $end
+$var integer 32 / errors [31:0] $end
+$scope module dut $end
+$var wire 1 ' CLK $end
+$var wire 8 0 DATA_IN_0 [7:0] $end
+$var wire 8 1 DATA_IN_1 [7:0] $end
+$var wire 8 2 DATA_IN_2 [7:0] $end
+$var wire 1 + DATA_VALID_IN $end
+$var wire 1 , RES $end
+$var wire 2 3 SEL [1:0] $end
+$var wire 1 . STB $end
+$var wire 1 " VALID_0 $end
+$var wire 1 ! VALID_1 $end
+$var wire 1 4 gated_valid $end
+$var wire 1 5 output_channel $end
+$var wire 1 # PARITY_1 $end
+$var wire 1 $ PARITY_0 $end
+$var wire 16 6 DATA_OUT_1 [15:0] $end
+$var wire 16 7 DATA_OUT_0 [15:0] $end
+$var reg 16 8 alu_result [15:0] $end
+$upscope $end
+$scope task run_case $end
+$var reg 8 9 a [7:0] $end
+$var reg 8 : b [7:0] $end
+$var reg 16 ; expected [15:0] $end
+$var reg 1 < expected_channel $end
+$var reg 1 = expected_parity $end
+$var reg 2 > sel [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx >
+x=
+x<
+bx ;
+bx :
+bx 9
+b0 8
+b0 7
+b0 6
+05
+04
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+0.
+b0 -
+0,
+0+
+b0 *
+b0 )
+b0 (
+0'
+b0 &
+b0 %
+0$
+0#
+0"
+0!
+$end
+#5000
+b11110 &
+b11110 7
+1"
+14
+b11110 8
+1+
+1.
+b1010 )
+b1010 1
+b11 (
+b11 0
+b11110 ;
+b1010 :
+b11 9
+b0 >
+#10000
+0<
+0=
+#15000
+b100 &
+b100 7
+1$
+b100 8
+b10 )
+b10 1
+b10 (
+b10 0
+b100 ;
+b10 :
+b10 9
+#20000
+1=
+#25000
+1!
+0"
+b0 &
+b0 7
+0$
+b0 8
+15
+b111 )
+b111 1
+b111 (
+b111 0
+b1 -
+b1 3
+b0 ;
+b111 :
+b111 9
+b1 >
+#30000
+1<
+0=
+#35000
+b1 %
+b1 6
+1#
+b1 8
+b11 )
+b11 1
+b100 (
+b100 0
+b1 ;
+b11 :
+b100 9
+#40000
+1=
+#45000
+0#
+b10 &
+b10 7
+1$
+0!
+1"
+b0 %
+b0 6
+b10 8
+05
+b101 )
+b101 1
+b1010 (
+b1010 0
+b10 -
+b10 3
+b10 ;
+b101 :
+b1010 9
+b10 >
+#50000
+0<
+#55000
+b11 &
+b11 7
+0$
+b11 8
+b10 )
+b10 1
+b111 (
+b111 0
+b11 ;
+b10 :
+b111 9
+#60000
+0=
+#65000
+1!
+0"
+b0 &
+b0 7
+b0 8
+15
+b1010 (
+b1010 0
+b11 -
+b11 3
+b0 ;
+b1010 9
+b11 >
+#70000
+1<
+#75000

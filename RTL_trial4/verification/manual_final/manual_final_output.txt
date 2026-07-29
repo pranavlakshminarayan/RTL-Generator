@@ -1,0 +1,10 @@
+VCD info: dumpfile manual_final.vcd opened for output.
+PASS sel=00 DATA_IN_0=3 DATA_IN_1=10 expected=30 observed=30 channel=0 parity=0
+PASS sel=00 DATA_IN_0=2 DATA_IN_1=2 expected=4 observed=4 channel=0 parity=1
+PASS sel=01 DATA_IN_0=7 DATA_IN_1=7 expected=0 observed=0 channel=1 parity=0
+PASS sel=01 DATA_IN_0=4 DATA_IN_1=3 expected=1 observed=1 channel=1 parity=1
+PASS sel=10 DATA_IN_0=10 DATA_IN_1=5 expected=2 observed=2 channel=0 parity=1
+PASS sel=10 DATA_IN_0=7 DATA_IN_1=2 expected=3 observed=3 channel=0 parity=0
+PASS sel=11 DATA_IN_0=10 DATA_IN_1=2 expected=0 observed=0 channel=1 parity=0
+OVERALL PASS
+manual_final_tb.v:111: $finish called at 75000 (1ps)

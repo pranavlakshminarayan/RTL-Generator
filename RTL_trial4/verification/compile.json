@@ -1,0 +1,56 @@
+{
+  "stages": [
+    {
+      "stage": "syntax",
+      "outcome": "pass",
+      "tool_runs": [
+        {
+          "tool": "C:\\iverilog\\bin\\iverilog.exe",
+          "command": [
+            "iverilog",
+            "-g2012",
+            "-tnull",
+            "-s",
+            "alu_selective_io",
+            "generation/final.v"
+          ],
+          "exit_code": 0,
+          "stdout": "STANDALONE_COMPILE PASS",
+          "stderr": "",
+          "duration_seconds": null,
+          "timed_out": false
+        }
+      ],
+      "testbench_source": null,
+      "skip_reason": "",
+      "detail": "Corrected arithmetic ALU RTL compiled standalone before testbench execution."
+    },
+    {
+      "stage": "syntax",
+      "outcome": "pass",
+      "tool_runs": [
+        {
+          "tool": "C:\\iverilog\\bin\\iverilog.exe",
+          "command": [
+            "iverilog",
+            "-g2012",
+            "-o",
+            "verification/user_02/sim.vvp",
+            "-s",
+            "trial4_user_tb",
+            "generation/final.v",
+            "testbenches/user_tb.v"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "duration_seconds": null,
+          "timed_out": false
+        }
+      ],
+      "testbench_source": "user",
+      "skip_reason": "",
+      "detail": "User arithmetic ALU testbench compiled successfully."
+    }
+  ]
+}
